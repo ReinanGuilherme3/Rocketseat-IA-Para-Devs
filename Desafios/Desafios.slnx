@@ -8,5 +8,6 @@
   </Folder>
   <Folder Name="/src/RAG/Recursos/">
     <File Path="src/RAG/Recursos/os-sertoes.pdf" />
+    <File Path="src/RAG/Recursos/README.md" />
   </Folder>
 </Solution>

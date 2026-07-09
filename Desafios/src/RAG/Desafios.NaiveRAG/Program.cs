@@ -1,7 +1,5 @@
 ﻿using Dapper;
 using Microsoft.Extensions.AI;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Npgsql;
 using Pgvector;
 using Pgvector.Dapper;
@@ -25,8 +23,6 @@ var app = builder.Build();
 await EnsureDatabaseSchemaAsync(app.Services);
 await IndexDocumentIfNeededAsync(app.Services);
 
-// Interface web (Passo 7): como o Aspire não encaminha o teclado pro console
-// de um recurso orquestrado, a pergunta é feita por HTTP em vez de stdin.
 const string askPageHtml = """
     <!DOCTYPE html>
     <html lang="pt-br">
@@ -103,7 +99,7 @@ static async Task EnsureDatabaseSchemaAsync(IServiceProvider services)
     await connection.ExecuteAsync(schemaSql);
 }
 
-// Pipeline de indexação (Passo 6): extrai o texto do PDF, divide em chunks,
+// Extrai o texto do PDF, divide em chunks,
 // gera o embedding de cada chunk e persiste tudo em document_chunks.
 // Só roda se a tabela ainda estiver vazia, pra não reprocessar o livro a cada start.
 static async Task IndexDocumentIfNeededAsync(IServiceProvider services)
