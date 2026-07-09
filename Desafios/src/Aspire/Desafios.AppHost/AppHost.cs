@@ -37,8 +37,7 @@ var parentRAG = builder.AddProject<Projects.Desafios_ParentRAG>("parentrag-app")
     .WaitFor(postgres)
     .WaitFor(ollama)
     .WaitFor(chatModel)
-    .WaitFor(embedModel)
-    .WaitFor(naiveRAG);
+    .WaitFor(embedModel);
 
 builder.AddProject<Projects.Desafios_RerankRAG>("rerankrag-app")
     .WithReference(chatModel)
@@ -47,7 +46,6 @@ builder.AddProject<Projects.Desafios_RerankRAG>("rerankrag-app")
     .WaitFor(postgres)
     .WaitFor(ollama)
     .WaitFor(chatModel)
-    .WaitFor(embedModel)
-    .WaitFor(parentRAG);
+    .WaitFor(embedModel);
 
 builder.Build().Run();
