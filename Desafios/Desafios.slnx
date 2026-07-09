@@ -5,6 +5,9 @@
   </Folder>
   <Folder Name="/src/RAG/">
     <Project Path="src/RAG/Desafios.NaiveRAG/Desafios.NaiveRAG.csproj" />
+    <Project Path="src/RAG/Desafios.ParentRAG/Desafios.ParentRAG.csproj" />
+    <Project Path="src/RAG/Desafios.RerankRAG/Desafios.RerankRAG.csproj" />
+    <Project Path="src/RAG/Desafios.RAG.Shared/Desafios.RAG.Shared.csproj" />
   </Folder>
   <Folder Name="/src/RAG/Recursos/">
     <File Path="src/RAG/Recursos/os-sertoes.pdf" />

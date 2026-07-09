@@ -2,6 +2,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\RAG\Desafios.NaiveRAG\Desafios.NaiveRAG.csproj" />
+    <ProjectReference Include="..\..\RAG\Desafios.ParentRAG\Desafios.ParentRAG.csproj" />
+    <ProjectReference Include="..\..\RAG\Desafios.RerankRAG\Desafios.RerankRAG.csproj" />
   </ItemGroup>
 
   <ItemGroup>
